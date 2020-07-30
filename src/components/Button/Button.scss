@@ -1,0 +1,14 @@
+.button {
+  padding: 0 2em;
+  height: 5em;
+  border: 1px solid #000c2d;
+  background-color: #000c2d;
+  border-radius: 5px;
+  span {
+    color: white;
+    font: 500 1.4em Arial;
+  }
+  .icon {
+    margin-left: 1em;
+  }
+}

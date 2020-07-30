@@ -1,0 +1,27 @@
+.landing-section {
+  background-color: #000c2d;
+  padding: 0 3%;
+  .content-section {
+    .content {
+      width: 45%;
+      h2,
+      p {
+        color: white;
+        margin: 0;
+      }
+      p {
+        font-size: 1.4em;
+      }
+      h2 {
+        margin: 0.5em 0;
+        font-size: 3.5em;
+        line-height: 1.5em;
+        font-family: Georgia, Times, 'Times New Roman', serif;
+      }
+    }
+    img {
+      width: 48%;
+      object-fit: contain;
+    }
+  }
+}

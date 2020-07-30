@@ -1,0 +1,38 @@
+.newsletter {
+  padding: 3em 2em;
+  background-color: #defaec;
+  p {
+    text-align: center;
+  }
+  h2 {
+    margin: 0.1em auto 1em;
+    font: bold 4em Arial;
+    width: 90%;
+    text-align: center;
+  }
+
+  .subscribe {
+    input {
+      height: 3.8em;
+      width: 25%;
+      margin-right: 2em;
+      background-color: white;
+      border: none;
+      padding: 0 1em;
+      border-radius: 5px;
+      font-weight: 500;
+      outline: none;
+      font-size: 1.1em;
+
+      &::placeholder {
+        color: black;
+      }
+    }
+
+    .newsletter-btn {
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

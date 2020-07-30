@@ -1,0 +1,59 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.flexed-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexed-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexed-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexed-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flexed-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h4,
+h5,
+p,
+span,
+strong,
+a {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.custom-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 1.4em;
+  font-weight: 500;
+}
