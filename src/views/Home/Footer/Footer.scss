@@ -1,0 +1,94 @@
+@import '../../../media.scss';
+
+.footer {
+  background-color: #000c2d;
+  padding: 4em 4%;
+  .footer-links-container {
+    padding: 5% 0;
+    .footer-links {
+      width: 40%;
+
+      .links-comp {
+        h5 {
+          font-weight: 500;
+          margin: 0.5em 0;
+          color: white;
+        }
+        a {
+          margin: 0;
+          display: block;
+          margin-top: 1.5em;
+          color: white;
+          text-transform: capitalize;
+          font-weight: 400;
+          cursor: pointer;
+        }
+      }
+    }
+    .gidara-container {
+      width: 40%;
+      .info {
+        margin-left: 1em;
+        h5 {
+          font-weight: bold;
+          margin-bottom: 0.3em;
+          color: white;
+        }
+        p {
+          color: white;
+        }
+      }
+    }
+    @include for-size(wide-tab) {
+      .footer-links,
+      .gidara-container {
+        width: 45%;
+      }
+    }
+
+    @include for-size(tablet-landscape-up) {
+      flex-direction: column;
+      font-size: 0.8em;
+      .footer-links,
+      .gidara-container {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .gidara-container {
+        margin-top: 2em;
+        justify-content: center;
+        .info {
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+
+  .copy-right-wrap {
+    margin-top: 2em;
+    p {
+      color: white;
+      font-size: 1em;
+      font-weight: 400;
+    }
+    @include for-size(phone-only) {
+      flex-direction: column-reverse;
+      margin-top: 1em;
+      p,
+      .socialicons {
+        text-align: center;
+        margin: 0 auto;
+      }
+      p {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  @include for-size(wide-tab) {
+    font-size: 0.8em;
+  }
+  @include for-size(smaller-desktop) {
+    font-size: 0.9em;
+  }
+}

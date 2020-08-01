@@ -48,3 +48,18 @@ export const mentorContents = [
       'https://res.cloudinary.com/dmyu8akhu/image/upload/v1596052901/Mentors_section_image_3_-_Chance_the_rapper_wrei6z.png',
   },
 ];
+
+export const footerLinksMock = [
+  {
+    name: 'Catalogue',
+    path: '/',
+  },
+  {
+    name: 'Popular',
+    path: '/',
+  },
+  {
+    name: 'Features',
+    path: '/',
+  },
+];

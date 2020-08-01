@@ -19,11 +19,13 @@ const LandingSection = () => {
             design support and our network of successful Indie musicians
           </p>
         </article>
-        <img
-          className='background-img'
-          src='https://res.cloudinary.com/dmyu8akhu/image/upload/v1596052927/Hero_image_ng8oes.png'
-          alt='background img'
-        />
+        <div className='img-wrap flexed-col'>
+          <img
+            className='background-img'
+            src='https://res.cloudinary.com/dmyu8akhu/image/upload/v1596052927/Hero_image_ng8oes.png'
+            alt='background img'
+          />
+        </div>
       </div>
     </section>
   );

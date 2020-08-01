@@ -5,6 +5,7 @@ import LandingSection from './LandingSection';
 import WhatWeDo from './WhatWeDo';
 import OurMentors from './OurMentors';
 import Resources from './Resources';
+import Footer from './Footer';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <OurMentors />
       <Resources />
       <Newsletter />
+      <Footer />
     </div>
   );
 };

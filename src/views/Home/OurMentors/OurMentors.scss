@@ -1,40 +1,40 @@
+@import '../../../media.scss';
+
 .our-mentors {
   padding: 2em 0 4em;
   overflow: hidden;
   background-color: #000c2d;
   position: relative;
   h2 {
-    font: bold 4em 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif;
+    font: bold 4em 'Rubik';
     color: white;
     margin: 1em 0;
     text-align: center;
   }
   .second-grid-layout {
-    width: 144%;
     display: grid;
-    transform: translateX(-15.5%);
-    grid-template-columns: 31% 31% 31%;
-    grid-column-gap: 3.5%;
+    transition-property: transform;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
   }
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 25%;
-    background-color: #000c2d8e;
-    left: 0;
-    z-index: 100;
+
+  .no-transition {
+    transition-duration: 0s !important;
   }
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 25%;
-    background-color: #000c2d8e;
-    right: 0;
-    z-index: 100;
+  .hide-btn {
+    display: none;
+  }
+  @include for-size(smaller-desktop) {
+    font-size: 0.9em;
+  }
+
+  @include for-size(wide-tab) {
+    font-size: 0.8em;
+  }
+
+  @include for-size(tablet-landscape-up) {
+  }
+
+  @include for-size(phone-only) {
   }
 }

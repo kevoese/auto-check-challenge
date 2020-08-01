@@ -1,12 +1,15 @@
+@import '../../../media.scss';
+
 .newsletter {
-  padding: 3em 2em;
+  padding: 10% 2em;
   background-color: #defaec;
   p {
     text-align: center;
+    font-size: 1.5em;
   }
   h2 {
     margin: 0.1em auto 1em;
-    font: bold 4em Arial;
+    font: 700 4em 'Rubik';
     width: 90%;
     text-align: center;
   }
@@ -15,7 +18,7 @@
     input {
       height: 3.8em;
       width: 25%;
-      margin-right: 2em;
+      margin-right: 2%;
       background-color: white;
       border: none;
       padding: 0 1em;
@@ -23,6 +26,7 @@
       font-weight: 500;
       outline: none;
       font-size: 1.1em;
+      min-width: 200px;
 
       &::placeholder {
         color: black;
@@ -33,6 +37,29 @@
       span {
         font-weight: bold;
       }
+    }
+  }
+
+  @include for-size(wide-tab) {
+    font-size: 0.8em;
+  }
+  @include for-size(smaller-desktop) {
+    font-size: 0.9em;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    h2 {
+      font-size: 2.5em;
+    }
+  }
+
+  @include for-size(phone-only) {
+    h2 {
+      font-size: 1.5em;
+    }
+    .subscribe,
+    button {
+      font-size: 0.8em;
     }
   }
 }
