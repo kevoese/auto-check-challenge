@@ -6,7 +6,7 @@ import { articleContents } from '../../../utils/mockData';
 
 const WhatWeDo = () => {
   return (
-    <div className='what-we-do flexed-row'>
+    <div id='whatwedo' className='what-we-do flexed-row'>
       <SideTitle text='What we do' />
       <ArticleComp
         contents={articleContents}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../../components/Navbar';
 import './LandingSection.scss';
+import DownArrow from './DownArrow';
 
 const LandingSection = () => {
   return (
@@ -18,6 +19,9 @@ const LandingSection = () => {
             fees in youbg budding Nigerian artists and help them suceed with
             design support and our network of successful Indie musicians
           </p>
+          <a href='#whatwedo' className='down-arrow pointers'>
+            <DownArrow />
+          </a>
         </article>
         <div className='img-wrap flexed-col'>
           <img

@@ -1,8 +1,16 @@
 .gridcontainer {
   margin-top: 4em;
+  padding: 0.5em;
+  overflow-x: hidden;
+
   .grid-layout {
     display: grid;
-    grid-template-columns: 31% 31% 31%;
-    column-gap: 3.5%;
+    transition-property: transform;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+  }
+
+  .no-transition {
+    transition-duration: 0s !important;
   }
 }

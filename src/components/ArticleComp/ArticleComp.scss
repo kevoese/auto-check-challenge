@@ -1,3 +1,5 @@
+@import '../../media.scss';
+
 .article-comp {
   margin-left: 2em;
   border-top: 1px solid black;
@@ -12,4 +14,18 @@
   .article-btn {
     padding: 3em 1em;
   }
+
+  @include for-size(smaller-desktop) {
+    font-size: 0.9em;
+  }
+
+  @include for-size(wide-tab) {
+    font-size: 0.8em;
+  }
+
+  // @include for-size(tablet-landscape-up) {
+  // }
+
+  // @include for-size(phone-only) {
+  // }
 }

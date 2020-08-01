@@ -39,7 +39,7 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 h4,
@@ -51,7 +51,9 @@ a {
   font-family: 'Rubik';
   margin: 0;
 }
-
+.pointers {
+  cursor: pointer;
+}
 .custom-text {
   font-family: 'Rubik';
   font-weight: 500;

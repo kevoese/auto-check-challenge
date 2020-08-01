@@ -2,31 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import MentorCardComp from '../../../components/MentorCardComp';
 import './OurMentors.scss';
 import { mentorContents } from '../../../utils/mockData';
-// import TinySlider from 'tiny-slider-react';
-// import Carousel from './Carousel';
-
-const getGridStyles = (contents, pos, noTransition) => {
-  const contentLength = contents.length;
-  const gap = 7 / (contentLength - 1);
-  const multiples = contentLength * gap;
-  const percent = (100 - multiples - gap) / contentLength;
-  const moveVal = pos * (percent + gap) + percent / 2;
-  const styleObj = {
-    transform: `translateX(-${moveVal}%)`,
-    width: `${contentLength * 48}%`,
-    gridTemplateColumns: `repeat(${contentLength}, minmax(${percent}%, ${percent}%))`,
-    gridColumnGap: `${gap}%`,
-  };
-  return styleObj;
-};
-
-const patchArr = (arr, patchNum) => {
-  const halfPos = Math.ceil(arr.length / 2);
-  const startLength = arr.length - halfPos - Math.floor(patchNum / 2);
-  const newChunk = arr.slice(startLength, startLength + patchNum);
-  const modified = [...newChunk, ...arr, ...newChunk];
-  return modified;
-};
+import {
+  patchArr,
+  getGridStyles,
+  mentorCarouselSizes as sizes,
+} from '../../../utils/helpers';
 
 const modifiedArr = patchArr(mentorContents, 3);
 const OurMentors = () => {
@@ -38,6 +18,10 @@ const OurMentors = () => {
     leftType: false,
   });
   const mentorsRef = useRef();
+  const [resizeState, setResizeState] = useState({
+    percent: 1,
+    edge: 0.5,
+  });
 
   useEffect(() => {
     if (pos === 3 || pos === 6) {
@@ -63,10 +47,27 @@ const OurMentors = () => {
     }
   }, [noTransition.state]);
 
-  // useEffect(() => {
-  //   handleResizing();
-  //   window.addEventListener('resize', handleResizing);
-  // }, []);
+  // responsive screens
+  useEffect(() => {
+    handleResizing();
+    window.addEventListener('resize', handleResizing);
+    return () => {
+      window.removeEventListener('resize', handleResizing);
+    };
+  }, []);
+
+  const handleResizing = () => {
+    const parentWidth = mentorsRef.current.parentElement.clientWidth;
+    if (parentWidth > 550 && parentWidth < 800) {
+      setResizeState(sizes.tab);
+    } else if (parentWidth > 400 && parentWidth < 550) {
+      setResizeState(sizes.phone);
+    } else if (parentWidth < 400) {
+      setResizeState(sizes.smallPhone);
+    } else {
+      setResizeState(sizes.default);
+    }
+  };
 
   const handleNext = () => {
     setPos((prev) => prev + 1);
@@ -75,8 +76,6 @@ const OurMentors = () => {
   const handlePrev = () => {
     setPos((prev) => prev - 1);
   };
-
-  const myStyles = getGridStyles(modifiedArr, pos, noTransition);
 
   return (
     <div className='our-mentors'>
@@ -87,7 +86,7 @@ const OurMentors = () => {
         className={`second-grid-layout ${
           noTransition?.state ? 'no-transition' : ''
         }`}
-        style={{ ...myStyles }}
+        style={{ ...getGridStyles(modifiedArr, pos, resizeState) }}
       >
         {modifiedArr.map((ele, i) => {
           let classes = i === pos + 1 ? 'in-view' : 'not-in-view';

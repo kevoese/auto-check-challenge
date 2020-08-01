@@ -63,3 +63,30 @@ export const footerLinksMock = [
     path: '/',
   },
 ];
+
+export const navLinks = [
+  {
+    name: 'Companies',
+    path: '/',
+  },
+  {
+    name: 'Team',
+    path: '/',
+  },
+  {
+    name: 'Resources',
+    path: '/',
+  },
+  {
+    name: 'Programs',
+    path: '/',
+  },
+  {
+    name: 'Blog',
+    path: '/',
+  },
+  {
+    name: 'Contact',
+    path: '/',
+  },
+];

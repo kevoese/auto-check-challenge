@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "startdev": "webpack-dev-server --mode=development",
-    "start": "node server/index.js",
+    "start": "serve -s dist",
     "build": "rimraf dist && mkdir dist && webpack --mode=production"
   },
   "repository": {
@@ -38,6 +38,7 @@
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.2.0",
     "sass-loader": "^9.0.2",
+    "serve": "^11.3.2",
     "style-loader": "^1.0.0",
     "tiny-slider-react": "^0.5.3",
     "webpack": "^4.41.2",
