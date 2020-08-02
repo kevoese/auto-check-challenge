@@ -1,7 +1,8 @@
 .gridcontainer {
   margin-top: 4em;
-  padding: 0.5em;
-  overflow-x: hidden;
+  // padding: 0.5em;
+  overflow: hidden;
+  position: relative;
 
   .grid-layout {
     display: grid;

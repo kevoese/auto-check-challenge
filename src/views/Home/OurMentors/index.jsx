@@ -25,11 +25,11 @@ const OurMentors = () => {
 
   useEffect(() => {
     if (pos === 3 || pos === 6) {
-      setNoTransition({ state: false, leftType: false });
+      setNoTransition({ state: false, leftType: pos === 3 ? false : true });
     }
+
     if (pos > 6) {
       setNoTransition({ state: true, leftType: false });
-      setPos(3);
     }
     if (pos < 0) {
       setNoTransition({ state: true, leftType: true });
@@ -43,7 +43,11 @@ const OurMentors = () => {
 
   useEffect(() => {
     if (noTransition.state) {
-      noTransition.leftType ? setPos(5) : setPos(4);
+      noTransition.leftType ? setPos(6) : setPos(3);
+    } else {
+      if (pos === 3 || pos === 6) {
+        noTransition.leftType ? setPos(5) : setPos(4);
+      }
     }
   }, [noTransition.state]);
 
@@ -95,6 +99,7 @@ const OurMentors = () => {
               handleNext={handleNext}
               handlePrev={handlePrev}
               classes={classes}
+              disabled={hideBtn}
               key={i}
               {...ele}
             />

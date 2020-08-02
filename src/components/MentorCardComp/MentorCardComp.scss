@@ -20,8 +20,11 @@
     display: flex;
     justify-content: space-between;
     width: 7em;
-    .arrows {
-      cursor: pointer;
+    button {
+      display: block;
+      border: none;
+      background-color: transparent;
+      outline: none;
     }
   }
 }

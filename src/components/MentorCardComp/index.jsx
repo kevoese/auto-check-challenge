@@ -10,17 +10,18 @@ const MentorCardComp = ({
   handleNext,
   bio,
   classes,
+  disabled,
 }) => {
   return (
     <div className={`mentorcardcomp ${classes || ''}`}>
       <img src={img} alt='' />
       <div className='btn-wraps'>
-        <div className='arrows' onClick={handlePrev}>
+        <button disabled={disabled} className='pointers' onClick={handlePrev}>
           <ArrowLeft greenType />
-        </div>
-        <div className='arrows' onClick={handleNext}>
+        </button>
+        <button disabled={disabled} className='pointers' onClick={handleNext}>
           <ArrowRight greenType />
-        </div>
+        </button>
       </div>
       <h3>{name}</h3>
       <p className='custom-text'>{bio}</p>
