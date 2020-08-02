@@ -1,7 +1,7 @@
 export const mentorCarouselSizes = {
   default: {
     percent: 1,
-    edge: 0.5,
+    edge: 0.42,
   },
   tab: {
     percent: 1.5,
