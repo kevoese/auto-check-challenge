@@ -13,23 +13,26 @@ const GridContainer = ({ contents, showArrows }) => {
     mouseDrag: false,
     controls: false,
     center: true,
-    gutter: 50,
     responsive: {
       '1000': {
         items: 3,
         edgePadding: 0,
+        gutter: 50,
       },
-      '800': {
+      '700': {
         items: 1,
         edgePadding: 100,
+        gutter: 40,
       },
       '350': {
         items: 1,
-        edgePadding: 40,
+        edgePadding: 0,
+        gutter: 30,
       },
       '300': {
         items: 1,
-        edgePadding: 20,
+        edgePadding: 0,
+        gutter: 20,
       },
     },
   });

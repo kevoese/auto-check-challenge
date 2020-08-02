@@ -1,3 +1,5 @@
+@import './media.scss';
+
 body {
   background-color: white;
   margin: 0;
@@ -60,4 +62,24 @@ a {
   font-size: 1.4em;
   font-weight: 400;
   line-height: 1.5em;
+}
+
+.what-we-do,
+.resources {
+  position: relative;
+  padding: 4em 0 4% 4em;
+  margin: 0 4%;
+
+  @include for-size(phone-only) {
+    padding-left: 0;
+    .sidetitle {
+      position: relative !important;
+      transform: rotate(0);
+      top: 0;
+      font-size: 3em;
+    }
+    .article-comp {
+      margin-left: 0;
+    }
+  }
 }

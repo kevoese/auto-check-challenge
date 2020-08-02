@@ -1,12 +1,11 @@
 import React from 'react';
-import './WhatWeDo.scss';
 import SideTitle from '../../../components/SideTitle';
 import ArticleComp from '../../../components/ArticleComp';
 import { articleContents } from '../../../utils/mockData';
 
 const WhatWeDo = () => {
   return (
-    <div id='whatwedo' className='what-we-do flexed-row'>
+    <div id='whatwedo' className='what-we-do'>
       <SideTitle text='What we do' />
       <ArticleComp
         contents={articleContents}
